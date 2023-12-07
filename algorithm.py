@@ -1,13 +1,15 @@
 number_of_test_file = 1
 vertexes = 10
 
+
 def input_from_file(number_of_test_file):
     with open("test_files/input{0}.txt".format(number_of_test_file), 'r') as file:
         adjacency_matrix = [list(map(int, line.split())) for line in file]
     return adjacency_matrix
 
+
 adjacency_matrix = input_from_file(number_of_test_file)
-visited = [False] * vertexes 
+visited = [False] * vertexes
 number_of_components = 0
 
 for i in range(vertexes):
